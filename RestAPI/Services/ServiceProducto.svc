@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RestAPI.Services.ServiceProducto" CodeBehind="ServiceProducto.svc.cs" %>
