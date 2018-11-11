@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tienda", "Tienda\Tienda.csproj", "{70C63C48-2DA1-43CB-B9DF-A1B13CD53962}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9461F89A-05DF-4483-B619-E99A8D258513} = {9461F89A-05DF-4483-B619-E99A8D258513}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI", "RestAPI\RestAPI.csproj", "{9461F89A-05DF-4483-B619-E99A8D258513}"
 EndProject

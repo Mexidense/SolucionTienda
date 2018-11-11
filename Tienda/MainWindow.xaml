@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tienda"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="191.949" Width="800">
+    <StackPanel>
+        <TextBox Name="nombreTextBox" Text="Inserte nombre"></TextBox>
+        <TextBox Name="codigoTextBox" Text="Inserte código producto"></TextBox>
+        <TextBox Name="valorTextBox" Text="Inserte valor producto"></TextBox>
+        <Button Name="insertButton" Content="Insertar producto" Click="insertButton_Click"></Button>
+        <TextBox x:Name="successTextBox" Height="38" TextWrapping="Wrap" Text="" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF57A223"/>
+    </StackPanel>
 </Window>

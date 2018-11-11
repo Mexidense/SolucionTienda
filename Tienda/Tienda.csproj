@@ -61,6 +61,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -84,6 +85,11 @@
     </Compile>
     <Compile Include="COMUNA.cs">
       <DependentUpon>TiendaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceProductoReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="TiendaModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -131,6 +137,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\ServiceProductoReference\ServiceProducto.wsdl" />
+    <None Include="Connected Services\ServiceProductoReference\ServiceProducto.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceProductoReference\ServiceProducto1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -155,6 +168,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BDTienda.mdf</DependentUpon>
     </Content>
+    <None Include="Connected Services\ServiceProductoReference\ServiceProducto.disco" />
+    <None Include="Connected Services\ServiceProductoReference\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceProductoReference\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceProductoReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="TiendaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TiendaModel.Context.cs</LastGenOutput>
@@ -180,6 +200,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceProductoReference\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

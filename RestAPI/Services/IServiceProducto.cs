@@ -12,6 +12,6 @@ namespace RestAPI.Services
     public interface IServiceProducto
     {
         [OperationContract]
-        void agregarProducto(int codigo, string nombre, int valor);
+        bool agregarProducto(int codigo, string nombre, int valor);
     }
 }

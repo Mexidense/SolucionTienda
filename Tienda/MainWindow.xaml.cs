@@ -24,5 +24,13 @@ namespace Tienda
         {
             InitializeComponent();
         }
+
+        private void insertButton_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceProductoReference.ServiceProductoClient service = new ServiceProductoReference.ServiceProductoClient();
+            if (service.agregarProducto(Int32.Parse(codigoTextBox.Text), nombreTextBox.Text, Int32.Parse(valorTextBox.Text)))
+                successTextBox.Text = "Producto insertado";
+
+        }
     }
 }

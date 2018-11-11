@@ -11,8 +11,9 @@ namespace RestAPI.Services
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ServiceProducto.svc o ServiceProducto.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ServiceProducto : IServiceProducto
     {
-        public void agregarProducto(int codigo, string nombre, int valor)
+        public bool agregarProducto(int codigo, string nombre, int valor)
         {
+            bool result = false;
             BDProductoEntities entities = new BDProductoEntities();
 
             PRODUCTO p = new PRODUCTO();
@@ -21,7 +22,10 @@ namespace RestAPI.Services
             p.VALOR = valor;
 
             entities.PRODUCTO.Add(p);
-            entities.SaveChanges();
+            if (entities.SaveChanges() > 0)
+                return true;
+
+            return result;
         }
     }
 }
